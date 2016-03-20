@@ -189,7 +189,7 @@ func (j *Job) scheduleNextRun() {
 
 // Set the unit with second
 func (j *Job) Second() (job *Job) {
-	if j.interval != 1 {
+	if j.interval < 1 {
 		panic("")
 	}
 	job = j.Seconds()
